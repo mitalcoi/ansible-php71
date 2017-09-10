@@ -28,3 +28,8 @@
     dest: /etc/php/7.1/fpm/php.ini
   notify:
      - restart php-fpm
+     
+- name: install composer
+  shell: curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+  args:
+   creates: /usr/local/bin/composer
