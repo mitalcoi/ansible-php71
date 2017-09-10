@@ -24,7 +24,7 @@
 
 - name: copy php.ini
   template:
-    src: php.prod.ini
+    src: php.ini
     dest: /etc/php/7.1/fpm/php.ini
   notify:
      - restart php-fpm
