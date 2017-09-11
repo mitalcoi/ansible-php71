@@ -6,6 +6,7 @@
 - name: install php71
   apt: name={{ item }} update_cache=yes state=latest
   with_items:
+    - build-essential
     - php7.1
     - php7.1-cli
     - php7.1-curl
